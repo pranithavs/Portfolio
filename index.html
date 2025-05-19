@@ -6,280 +6,648 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranitha Velusamy Sundararaj - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e; /* Dark background for the track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7c3aed; /* Purple accent for the thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f5afd; /* Lighter purple on hover */
+        }
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Enhanced focus states for accessibility */
+        a:focus, button:focus, input:focus, textarea:focus {
+            outline: 2px solid #a78bfa; /* A slightly lighter purple for focus outline */
+            outline-offset: 2px;
+        }
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
-<body class="bg-black text-white font-sans">
-    <!-- Navigation -->
+<body class="bg-black text-white">
     <nav class="fixed w-full bg-black/90 backdrop-blur-sm z-50 border-b border-purple-300/20">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-xl font-bold text-purple-300">PRANITHA V.S</h1>
-                <div class="space-x-6">
-                    <a href="#about" class="hover:text-purple-300 transition">About</a>
-                    <a href="#education" class="hover:text-purple-300 transition">Education</a>
-                    <a href="#experience" class="hover:text-purple-300 transition">Experience</a>
-                    <a href="#projects" class="hover:text-purple-300 transition">Projects</a>
-                    <a href="#skills" class="hover:text-purple-300 transition">Skills</a>
-                    <a href="#publications" class="hover:text-purple-300 transition">Publications</a>
-                    <a href="#contact" class="hover:text-purple-300 transition">Contact</a>
+                <a href="#" class="text-xl font-bold text-purple-300 hover:text-purple-400 transition">PRANITHA V.S</a>
+                <div class="hidden md:flex space-x-4 lg:space-x-6">
+                    <a href="#about" class="hover:text-purple-300 transition px-2 py-1 rounded-md">About</a>
+                    <a href="#education" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Education</a>
+                    <a href="#experience" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Experience</a>
+                    <a href="#projects" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Projects</a>
+                    <a href="#skills" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Skills</a>
+                    <a href="#publications" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Publications</a>
+                    <a href="#contact" class="hover:text-purple-300 transition px-2 py-1 rounded-md">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-black/95 border-t border-purple-300/20">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">About</a>
+            <a href="#education" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Education</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Projects</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Skills</a>
+            <a href="#publications" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Publications</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-purple-500/20 hover:text-purple-300">Contact</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center text-center">
+    <section class="min-h-screen flex items-center justify-center text-center pt-20 bg-gradient-to-br from-black via-purple-900/30 to-black">
         <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-6xl font-bold mb-4 text-purple-300 ">Pranitha Velusamy Sundararaj</h1>
-            <div class="space-y-2">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 text-purple-300 animate-fadeInUp">Pranitha Velusamy Sundararaj</h1>
+            <div class="space-y-2 animate-fadeIn">
                 <p class="text-2xl text-gray-300">Data Science Specialist</p>
                 <p class="text-xl text-gray-400">Machine Learning & Cloud Solutions Engineer</p>
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-black/80">
+
+    <section id="about" class="py-16 lg:py-24 bg-black/80">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold text-purple-300 mb-6">About Me</h2>
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3 space-y-6">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-purple-300 mb-6">About Me</h2>
                     <p class="text-lg text-gray-300 leading-relaxed">
-                        Master's student in <span class="text-purple-300">Data Science</span> with expertise in predictive modeling 
-                        and cloud-native solutions. Proficient in transforming raw data into actionable insights 
-                        through advanced ML frameworks and big data technologies.
+                        Data Scientist with expertise in <span class="text-purple-300">predictive modeling, cloud-native solutions,</span> and large-scale data processing.
+                        Proficient in Python, SQL, AWS (Lex, Lambda, Rekognition), and ML frameworks (TensorFlow, Scikit-Learn).
+                        Skilled in <span class="text-purple-300">ETL workflows, Spark-driven analytics,</span> and end-to-end deployment of AI tools.
+                        Passionate about transforming raw data into actionable insights for scalable, real-world impact.
+                        Currently pursuing a Master's in Data Science at the University of Michigan-Dearborn.
                     </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <span class="text-purple-300">•</span>
-                            <a href="mailto:pranitha@umich.edu" class="hover:text-purple-300">pranitha@umich.edu</a>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-purple-300" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            <a href="mailto:pranithavs2310@gmail.com" class="hover:text-purple-300">pranithavs2310@gmail.com</a>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-purple-300">•</span>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-purple-300" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
                             <p>(313) 414-4989</p>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-purple-300">•</span>
-                            <a href="https://linkedin.com/in/pranitha-v-s" target="_blank" class="hover:text-purple-300">LinkedIn Profile</a>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <a href="https://linkedin.com/in/pranitha-v-s" target="_blank" rel="noopener noreferrer" class="hover:text-purple-300">linkedin.com/in/pranitha-v-s</a>
                         </div>
                     </div>
-                    <a href="/Pranitha_Velusamy_Sundararaj_Resume.pdf" download 
-                       class="inline-block bg-purple-300/10 text-purple-300 px-8 py-3 rounded-lg
-                              hover:bg-purple-300/20 transition shadow-[0_4px_14px_rgba(216,180,254,0.3)]
-                              mt-6">
+                    <a href="Pranitha_Velusamy_Sundararaj_Resume.pdf" download
+                       class="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg
+                              hover:bg-purple-700 transition shadow-[0_4px_14px_rgba(168,85,247,0.5)]
+                              mt-6 font-medium">
                         Download Resume
                     </a>
                 </div>
 
-                <!-- Image Container -->
-                <div class="flex justify-center md:justify-end">
-                    <div class="relative w-96 h-96 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(216,180,254,0.1)]">
-                        <!-- Replace with your actual image -->
-                        <img src="/pranitha.jpeg" alt="Pranitha Velusamy Sundararaj" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 border-2 border-purple-300/20 rounded-2xl"></div>
+                <div class="md:col-span-2 flex justify-center md:justify-end">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(168,85,247,0.2)] border-2 border-purple-400/30">
+                         <img src="pranitha.jpeg" 
+                             alt="Pranitha Velusamy Sundararaj"
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/2d004f/a78bfa?text=Pranitha+V.S';">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-8 text-purple-300">Education</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-900/50 p-8 rounded-xl bg-gray-900 p-8 rounded-xl 
-            shadow-[0_0_30px_5px_rgba(168,85,247,0.2)] 
-            border border-purple-300/20">
-                <h3 class="text-xl font-bold mb-2">Master of Science in Data Science</h3>
-                <p class="text-purple-300 mb-2">University of Michigan- Dearborn, USA</p>
-                <p class="text-gray-400">Aug 2023 – Apr 2025 | GPA: 3.74</p>
-            </div>
-            <div class="bg-gray-900/50 p-8 rounded-xl bg-gray-900 p-8 rounded-xl 
-            shadow-[0_0_30px_5px_rgba(168,85,247,0.1)] 
-            border border-purple-300/20">
-                <h3 class="text-xl font-bold mb-2">Bachelor of Engineering</h3>
-                <p class="text-purple-300 mb-2">PSG College of Technology, Coimbatore, India</p>
-                <p class="text-gray-400">Aug 2019 - Jul 2023 | GPA: 3.33</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-8 text-purple-300">Experience</h2>
-        <div class="bg-gray-900/50 p-8 rounded-xl bg-gray-900 p-8 rounded-xl 
-        shadow-[0_0_30px_5px_rgba(168,85,247,0.1)] 
-        border border-purple-300/20">
-            <h3 class="text-xl font-bold mb-4">Project Intern @ Samsung PRISM</h3>
-            <ul class="space-y-4 text-gray-300">
-                <li>• Developed RNN model with Bi-Directional LSTM achieving 81.62% sentence similarity accuracy</li>
-                <li>• Processed 417k+ sentence pairs using NLTK and optimized deployment with TensorFlow Lite</li>
-                <li>• Enhanced voice assistant performance achieving 95.65% semantic similarity accuracy</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-8 text-purple-300">Academic Projects</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project Cards -->
-            <div class="bg-gray-900/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all bg-gray-900 p-8 rounded-xl 
-            shadow-[0_0_30px_5px_rgba(168,85,247,0.1)] 
-            border border-purple-300/20">
-                <h3 class="text-xl font-bold mb-4 ">Student Performance Prediction</h3>
-                <p class="text-gray-300 mb-4">MLR model with 98.8% R² accuracy using Scikit-Learn</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Scikit-Learn</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Tableau</span>
+    <section id="education" class="py-16 lg:py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-purple-300 text-center">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-900/70 p-8 rounded-xl 
+                            shadow-[0_0_30px_5px_rgba(168,85,247,0.2)] 
+                            border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.3)] transition-shadow duration-300">
+                    <h3 class="text-xl lg:text-2xl font-bold mb-2 text-purple-200">Master of Science in Data Science</h3>
+                    <p class="text-purple-400 mb-1">University of Michigan- Dearborn, USA</p>
+                    <p class="text-gray-400 text-sm">Aug 2023 – Apr 2025 (Expected)</p>
+                    <p class="text-gray-300 mt-1">GPA: 3.74/4.00</p>
                 </div>
-            </div>
-
-            <div class="bg-gray-900/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all">
-                <h3 class="text-xl font-bold mb-4">Dining Concierge Chatbot</h3>
-                <p class="text-gray-300 mb-4">AWS Lex/Lambda powered restaurant suggestion system</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">AWS</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">DynamoDB</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-900/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all">
-                <h3 class="text-xl font-bold mb-4">Intelligent Photo Album Search</h3>
-                <p class="text-gray-300 mb-4">AWS Rekognition + ElasticSearch powered system</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">AWS</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Computer Vision</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">ElasticSearch</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-900/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all">
-                <h3 class="text-xl font-bold mb-4">Smart Health Prediction</h3>
-                <p class="text-gray-300 mb-4">Naive Bayes classifier with 92.7% accuracy</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Scikit-Learn</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Pandas</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-900/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all">
-                <h3 class="text-xl font-bold mb-4">Recommendation Systems</h3>
-                <p class="text-gray-300 mb-4">Collaborative Filtering with Apache Spark/MLib</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Spark</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">Big Data</span>
-                    <span class="bg-purple-300/10 text-purple-300 px-3 py-1 rounded-full text-sm">ALS</span>
+                <div class="bg-gray-900/70 p-8 rounded-xl 
+                            shadow-[0_0_30px_5px_rgba(168,85,247,0.15)] 
+                            border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-shadow duration-300">
+                    <h3 class="text-xl lg:text-2xl font-bold mb-2 text-purple-200">Bachelor of Engineering in Computer Science</h3>
+                    <p class="text-purple-400 mb-1">PSG College of Technology, Coimbatore, India</p>
+                    <p class="text-gray-400 text-sm">Aug 2019 - Jul 2023</p>
+                    <p class="text-gray-300 mt-1">GPA: 3.33/4.00</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-8 text-purple-300">Technical Skills</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-gray-300">
-            <div class="bg-gray-900/50 p-6 rounded-xl">
-                <h3 class="text-lg font-bold mb-4 text-purple-300">Languages & Frameworks</h3>
-                <ul class="space-y-2">
-                    <li>• Python (TensorFlow, Keras)</li>
-                    <li>• SQL (MySQL, PostgreSQL)</li>
-                    <li>• R Programming</li>
-                    <li>• PySpark</li>
-                </ul>
-            </div>
-            <div class="bg-gray-900/50 p-6 rounded-xl">
-                <h3 class="text-lg font-bold mb-4 text-purple-300">Cloud & DevOps</h3>
-                <ul class="space-y-2">
-                    <li>• AWS (12+ services)</li>
-                    <li>• Docker</li>
-                    <li>• Hadoop</li>
-                    <li>• Snowflake</li>
-                </ul>
-            </div>
-            <div class="bg-gray-900/50 p-6 rounded-xl">
-                <h3 class="text-lg font-bold mb-4 text-purple-300">Data Tools</h3>
-                <ul class="space-y-2">
-                    <li>• Tableau/Power BI</li>
-                    <li>• Apache Spark</li>
-                    <li>• ElasticSearch</li>
-                    <li>• NLP Tools</li>
+    <section id="experience" class="py-16 lg:py-24 bg-black/80">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-purple-300 text-center">Work Experience</h2>
+            <div class="max-w-3xl mx-auto bg-gray-900/70 p-8 rounded-xl 
+                        shadow-[0_0_30px_5px_rgba(168,85,247,0.2)] 
+                        border border-purple-400/30">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h3 class="text-xl lg:text-2xl font-bold text-purple-200">Project Intern</h3>
+                        <p class="text-purple-400">SAMSUNG PRISM, India</p>
+                    </div>
+                    <p class="text-gray-400 text-sm whitespace-nowrap">Jul 2021 – Mar 2022</p>
+                </div>
+                <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                    <li>Developed a Bi-Directional LSTM RNN model with Manhattan Distance, achieving <span class="text-purple-300">81.62% sentence similarity accuracy</span> on the Quora dataset.</li>
+                    <li>Preprocessed over 417,000 sentence pairs using NLTK for tokenization, cleaning, and lemmatization.</li>
+                    <li>Trained the model with Keras embeddings and deployed it using TensorFlow Lite for on-device efficiency.</li>
+                    <li>Integrated the model into an Android application using Stanford CoreNLP for dynamic Multi-Word Utterance Component (MWUC) sentence handling.</li>
+                    <li>Enhanced voice assistant performance, achieving <span class="text-purple-300">95.65% semantic similarity accuracy</span> and improved usability through MWUC reformulation.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-8 text-purple-300">Publications</h2>
-        <div class="bg-gray-900/50 p-8 rounded-xl">
-            <h3 class="text-xl font-bold mb-2">ML, NLP, Capsule Development | Bixby Utterance Reformulation (BUttR)</h3>
-            <p class="text-purple-300 mb-2">3rd International Conference on Engineering, Social-Sciences, and Humanities
-            </p>
-            <p class="text-gray-400">Presented: 30th - 31st March 2023</p>
+    <section id="projects" class="py-16 lg:py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-purple-300 text-center">Academic Projects</h2>
+            <div class="space-y-16 lg:space-y-24">
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-3/5 md:pr-8 order-2 md:order-1">
+                            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Deep Audio Classifier: Capuchin Bird Call Detector</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Built a binary CNN (Python/TensorFlow) detecting capuchin bird calls with 96% accuracy and 75% precision. Preprocessed rainforest audio (Librosa) with spectrograms, noise reduction, and augmentation. Applied regularization to mitigate overfitting.</p>
+                            <p class="text-gray-500 text-xs mb-4">Jan 2025 - Apr 2025</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Librosa</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">CNN</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Audio Processing</span>
+                            </div>
+                            <a href="https://github.com/yourusername/deep-audio-classifier" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 lg:w-2/5 order-1 md:order-2">
+                            <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Deep+Audio+Classifier" alt="Deep Audio Classifier Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-2/5 order-1">
+                             <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Student+Performance" alt="Student Performance Prediction Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                        <div class="md:w-1/2 lg:w-3/5 md:pl-8 order-2">
+                            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Student Performance Prediction</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Engineered an MLR model (98.8% R² accuracy) using Python/Scikit-Learn. Identified key predictors via EDA (Matplotlib, Tableau) and implemented robust data preprocessing (Pandas) and model validation (VIF).</p>
+                            <p class="text-gray-500 text-xs mb-4">Aug 2024 - Dec 2024</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Scikit-Learn</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Pandas</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Matplotlib</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Tableau</span>
+                            </div>
+                            <a href="https://github.com/yourusername/student-performance-prediction" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-3/5 md:pr-8 order-2 md:order-1">
+                            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Dining Concierge Chatbot</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Deployed a serverless chatbot using AWS Lex (NLP), Lambda (Python), and API Gateway. Integrated Yelp API and DynamoDB (NoSQL) for real-time restaurant suggestions and data storage.</p>
+                            <p class="text-gray-500 text-xs mb-4">Aug 2024 - Dec 2024</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">AWS Lex</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">AWS Lambda</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">DynamoDB</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">API Gateway</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Python</span>
+                            </div>
+                            <a href="https://github.com/yourusername/dining-chatbot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 lg:w-2/5 order-1 md:order-2">
+                            <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Dining+Chatbot" alt="Dining Concierge Chatbot Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-2/5 order-1">
+                            <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Photo+Search+App" alt="Intelligent Photo Album Search Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                        <div class="md:w-1/2 lg:w-3/5 md:pl-8 order-2">
+                           <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Intelligent Photo Album Search</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Built photo search using AWS Rekognition, Lex (NLP), and ElasticSearch. Implemented serverless Lambda (Python) triggered by S3 for automated metadata indexing. Enabled text/voice search via API Gateway.</p>
+                            <p class="text-gray-500 text-xs mb-4">Jan 2024 - Apr 2024</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">AWS Rekognition</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">ElasticSearch</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">AWS Lambda</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">NLP</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Computer Vision</span>
+                            </div>
+                            <a href="https://github.com/yourusername/intelligent-photo-search" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-3/5 md:pr-8 order-2 md:order-1">
+                            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Smart Health Disease Prediction</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Developed a Naive Bayes classifier (Python/Scikit-Learn) for disease prediction from symptoms. Executed data preprocessing and feature scaling (Pandas), achieving 92.7% prediction accuracy.</p>
+                            <p class="text-gray-500 text-xs mb-4">Jan 2024 - Apr 2024</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Scikit-Learn</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Pandas</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Naive Bayes</span>
+                            </div>
+                            <a href="https://github.com/yourusername/smart-health-prediction" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                        <div class="md:w-1/2 lg:w-2/5 order-1 md:order-2">
+                            <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Smart+Health+Prediction" alt="Smart Health Disease Prediction Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-gray-900/70 border border-purple-400/30 hover:shadow-[0_0_40px_10px_rgba(168,85,247,0.25)] transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/2 lg:w-2/5 order-1">
+                            <img src="https://placehold.co/600x400/3c0764/a78bfa?text=Recommendation+Systems" alt="Recommendation Systems Project" class="w-full h-auto max-h-80 object-contain rounded-lg shadow-xl">
+                        </div>
+                        <div class="md:w-1/2 lg:w-3/5 md:pl-8 order-2">
+                            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-purple-200">Recommendation Systems</h3>
+                            <p class="text-gray-300 mb-4 text-sm lg:text-base leading-relaxed">Implemented Popularity and Collaborative Filtering (ALS) recommenders using Apache Spark/MLlib. Processed 7.8M Amazon ratings (Big Data) and achieved optimized ALS model performance (RMSE 0.19).</p>
+                            <p class="text-gray-500 text-xs mb-4">Aug 2023 - Dec 2023</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Apache Spark</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">MLlib</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Big Data</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">ALS</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs">Collaborative Filtering</span>
+                            </div>
+                            <a href="https://github.com/yourusername/recommendation-systems" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container mx-auto px-6 py-16">
-        <div class="max-w-2xl mx-auto">
-          <div class="max-w-md mx-auto px-8 py-8 bg-gray-900 rounded-xl shadow-lg shadow-purple-500/20">
-            <h2 class="text-2xl font-semibold text-purple-300 mb-6 text-center">Get in Touch</h2>
-            <form>
-              <div class="mb-6">
-                <label class="block text-gray-300 mb-2" for="name">Your Name</label>
-                <input
-                  class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-300 transition duration-300 text-gray-200"
-                  placeholder="Enter your name"
-                  type="text"
-                />
-              </div>
-              <div class="mb-6">
-                <label class="block text-gray-300 mb-2" for="email">Your Email</label>
-                <input
-                  class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-300 transition duration-300 text-gray-200"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-              </div>
-              <div class="mb-8">
-                <label class="block text-gray-300 mb-2" for="message">Your Message</label>
-                <textarea
-                  class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-300 transition duration-300 text-gray-200"
-                  rows="4"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              <button
-                class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition duration-300 font-medium shadow-lg shadow-purple-500/20"
-                type="submit"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+    <section id="skills" class="py-16 lg:py-24 bg-black/80">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-purple-300 text-center">Technical Skills</h2>
+            <div class="space-y-10 text-gray-300"> 
+                <div class="bg-gray-900/70 p-6 rounded-xl border border-purple-400/30">
+                    <h3 class="text-xl font-semibold mb-6 text-purple-200 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        Programming & Data Processing
+                    </h3>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 text-center">
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-python-plain text-4xl text-yellow-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-r-plain text-4xl text-blue-300 mb-2"></i>
+                            <span class="text-xs text-gray-400">R Lang</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-mysql-plain text-4xl text-orange-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">MySQL</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-postgresql-plain text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">PostgreSQL</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-pandas-plain text-4xl text-white mb-2"></i>
+                            <span class="text-xs text-gray-400">Pandas</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-numpy-plain text-4xl text-blue-300 mb-2"></i>
+                            <span class="text-xs text-gray-400">NumPy</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-hadoop-plain text-4xl text-yellow-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">Hadoop</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-python-plain text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">PySpark</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/70 p-6 rounded-xl border border-purple-400/30">
+                    <h3 class="text-xl font-semibold mb-6 text-purple-200 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 mr-3 text-purple-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5M19.5 8.25h-1.5m-15 3.75h1.5m15 0h1.5m-15 3.75h1.5m15 0h1.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75a4.5 4.5 0 004.5-4.5H7.5a4.5 4.5 0 004.5 4.5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25V12m0 0v3.75m0-3.75a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25zM12 12.75H7.5a4.5 4.5 0 00-4.5 4.5v.75m13.5-.75a4.5 4.5 0 00-4.5-4.5H12m0 0V12m0 3.75a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM12 16.5v-3.75" />
+                          </svg>
+                        Machine Learning & AI
+                    </h3>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 text-center">
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <svg class="w-10 h-10 mb-2 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path> <path d="M2 17l10 5 10-5"></path> <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span class="text-xs text-gray-400">Scikit-learn</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-tensorflow-original text-4xl text-orange-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">TensorFlow</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                             <svg class="w-10 h-10 mb-2 text-red-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.007 2C6.487 2 2 6.486 2 12s4.487 10 10.007 10c5.52 0 10-4.486 10-10S17.527 2 12.007 2zM11.004 17H9V7h2.004v10zm4-10h-2V7h2v1.526c.701-.82 1.654-1.526 2.988-1.526 2.206 0 3.008 1.664 3.008 4.012V17h-2.004v-3.557c0-1.582-.42-2.443-1.678-2.443-1.02 0-1.52.688-1.764 1.304L15 17h-2V7z"></path></svg>
+                            <span class="text-xs text-gray-400">Keras</span>
+                        </div>
+                         <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-python-plain text-4xl text-green-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/70 p-6 rounded-xl border border-purple-400/30">
+                    <h3 class="text-xl font-semibold mb-6 text-purple-200 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        Cloud, DevOps & Visualization Tools
+                    </h3>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 text-center">
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-amazonwebservices-plain text-4xl text-orange-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <div class="flex flex-col items-center p-2 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="icon-snowflake text-4xl text-sky-400 mb-2"></i> <span class="text-xs text-gray-400">Snowflake</span>
+                        </div>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-docker-plain text-4xl text-blue-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-git-plain text-4xl text-red-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">Git</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-github-original text-4xl text-gray-300 mb-2"></i>
+                            <span class="text-xs text-gray-400">GitHub</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <svg class="w-10 h-10 mb-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            <span class="text-xs text-gray-400">Tableau</span>
+                        </div>
+                         <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <svg class="w-10 h-10 mb-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
+                            <span class="text-xs text-gray-400">Power BI</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-matplotlib-plain text-4xl text-blue-600 mb-2"></i> <span class="text-xs text-gray-400">Matplotlib</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                             <svg class="w-10 h-10 mb-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> <span class="text-xs text-gray-400">Seaborn</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-jupyter-plain-wordmark text-4xl text-orange-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">Jupyter</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-vscode-plain text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">VS Code</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-rstudio-plain text-4xl text-sky-500 mb-2"></i>
+                            <span class="text-xs text-gray-400">RStudio</span>
+                        </div>
+                         <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-googlecloud-plain text-4xl text-orange-400 mb-2"></i> <span class="text-xs text-gray-400">Colab</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 hover:bg-gray-800/70 rounded-lg transition-colors duration-200 cursor-default">
+                            <i class="devicon-elasticsearch-plain text-4xl text-teal-400 mb-2"></i>
+                            <span class="text-xs text-gray-400">ElasticSearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
+    <section id="publications" class="py-16 lg:py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-purple-300 text-center">Publications</h2>
+            <div class="max-w-3xl mx-auto bg-gray-900/70 p-8 rounded-xl 
+                        shadow-[0_0_30px_5px_rgba(168,85,247,0.2)] 
+                        border border-purple-400/30">
+                <h3 class="text-xl lg:text-2xl font-bold mb-2 text-purple-200">ML, NLP, Capsule Development | Bixby Utterance Reformulation (BUttR)</h3>
+                <p class="text-purple-400 mb-2">3rd International Conference on Engineering, Social-Sciences, and Humanities</p>
+                <p class="text-gray-400 text-sm">Presented: 30th - 31st March 2023</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-purple-300/20 mt-16">
+    <section id="contact" class="py-16 lg:py-24 bg-black/80">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <div class="px-6 py-8 sm:px-8 sm:py-10 bg-gray-900/70 rounded-xl shadow-[0_0_40px_10px_rgba(168,85,247,0.2)] border border-purple-400/30">
+                    <h2 class="text-2xl lg:text-3xl font-semibold text-purple-300 mb-8 text-center">Get in Touch</h2>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="26b94694-a0d2-4f0a-9980-226cee55a885">
+                        <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2" for="name">Your Name</label>
+                            <input
+                                class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-400/40 focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300 text-gray-200 placeholder-gray-500"
+                                placeholder="Enter your name"
+                                type="text" id="name" name="name" required
+                            />
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2" for="email">Your Email</label>
+                            <input
+                                class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-400/40 focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300 text-gray-200 placeholder-gray-500"
+                                placeholder="Enter your email"
+                                type="email" id="email" name="email" required
+                            />
+                        </div>
+                        <div class="mb-8">
+                            <label class="block text-gray-300 mb-2" for="message">Your Message</label>
+                            <textarea
+                                class="w-full px-4 py-3 bg-gray-800 rounded-lg border border-purple-400/40 focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300 text-gray-200 placeholder-gray-500"
+                                rows="4"
+                                placeholder="Enter your message" id="message" name="message" required
+                            ></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition duration-300 font-medium shadow-lg shadow-purple-500/30 focus:ring-4 focus:ring-purple-400 focus:ring-opacity-50"
+                            type="submit"
+                        >
+                            Send Message
+                        </button>
+                        <p id="form-status" class="mt-4 text-center text-sm"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-purple-300/20 mt-16 lg:mt-24 bg-black">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <div class="flex items-center space-x-4 mb-6 flex-wrap">
-                <a href="mailto:pranitha@umich.edu" class="hover:text-purple-300">pranitha@umich.edu</a>
-                <span>•</span>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6 flex-wrap">
+                <a href="mailto:pranithavs2310@gmail.com" class="hover:text-purple-300 transition duration-300">pranithavs2310@gmail.com</a>
+                <span class="hidden sm:inline">•</span>
                 <p>(313) 414-4989</p>
-                <span>•</span>
-                <a href="https://linkedin.com/in/pranitha-v-s" target="_blank"
-                    class="hover:text-purple-300">LinkedIn</a>
+                <span class="hidden sm:inline">•</span>
+                <a href="https://linkedin.com/in/pranitha-v-s" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-purple-300 transition duration-300">LinkedIn</a>
             </div>
-            <p>© 2023 Pranitha Velusamy Sundararaj. All rights reserved.</p>
+            <p class="text-sm">&copy; <span id="currentYear"></span> Pranitha Velusamy Sundararaj. All rights reserved.</p>
         </div>
     </footer>
-</body>
 
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Set current year in footer
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+
+        // Basic form submission handling (using Web3Forms example)
+        const form = document.querySelector('#contact form');
+        const formStatus = document.getElementById('form-status');
+
+        if (form && formStatus) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const object = {};
+                formData.forEach((value, key) => {
+                    object[key] = value;
+                });
+                // The access_key is taken from the form's hidden input by FormData.
+                // This explicit check is a fallback or for debugging.
+                if (!object.access_key) { 
+                    object.access_key = "26b94694-a0d2-4f0a-9980-226cee55a885"; // Ensure it's set if somehow missed
+                }
+                
+                const json = JSON.stringify(object);
+                formStatus.textContent = "Sending...";
+                formStatus.className = 'mt-4 text-center text-sm text-yellow-400'; // Using Tailwind for styling
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        formStatus.textContent = "Message sent successfully!";
+                        formStatus.className = 'mt-4 text-center text-sm text-green-400';
+                        form.reset(); // Reset form fields on success
+                    } else {
+                        formStatus.textContent = result.message || "Oops! Something went wrong.";
+                        formStatus.className = 'mt-4 text-center text-sm text-red-400';
+                    }
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    formStatus.textContent = "Oops! Something went wrong. Please try again.";
+                    formStatus.className = 'mt-4 text-center text-sm text-red-400';
+                }
+            });
+        }
+
+        // Simple fade-in animations for hero text
+        const fadeInUpElement = document.querySelector('.animate-fadeInUp');
+        const fadeInElement = document.querySelector('.animate-fadeIn');
+
+        if (fadeInUpElement) {
+            fadeInUpElement.classList.add('opacity-0', 'transform', 'translate-y-5');
+        }
+        if (fadeInElement) {
+            fadeInElement.classList.add('opacity-0');
+        }
+
+        window.addEventListener('load', () => {
+            if (fadeInUpElement) {
+                fadeInUpElement.classList.remove('opacity-0', 'translate-y-5');
+                fadeInUpElement.classList.add('opacity-100', 'translate-y-0', 'transition-all', 'duration-1000', 'ease-out');
+            }
+            if (fadeInElement) {
+                fadeInElement.classList.remove('opacity-0');
+                fadeInElement.classList.add('opacity-100', 'transition-opacity', 'duration-1000', 'ease-out', 'delay-500'); 
+            }
+        });
+
+    </script>
+</body>
 </html>
